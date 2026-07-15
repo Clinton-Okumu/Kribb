@@ -5,7 +5,7 @@ export default function RootLayout() {
   const { isSignedIn, isLoaded } = useAuth();
 
   if (!isLoaded) return null;
-  if (isSignedIn) return <Redirect href={"/"} />;
+  if (!isSignedIn) return <Redirect href="/(Auth)/sign-in" />;
 
   return <Slot />;
 }
