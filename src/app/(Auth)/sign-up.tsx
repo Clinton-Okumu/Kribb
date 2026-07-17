@@ -116,7 +116,7 @@ export default function SignUp() {
             <View className="flex-row gap-3 mb-4">
               <View className="flex-1">
                 <TextInput
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-black bg-white"
                   placeholder="First name"
                   placeholderTextColor="#9CA3AF"
                   value={firstName}
@@ -126,7 +126,7 @@ export default function SignUp() {
               </View>
               <View className="flex-1">
                 <TextInput
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-black bg-white"
                   placeholder="Last name"
                   placeholderTextColor="#9CA3AF"
                   value={lastName}
@@ -137,7 +137,7 @@ export default function SignUp() {
             </View>
 
             <TextInput
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4 text-black bg-white"
               placeholder="Email Address"
               placeholderTextColor="#9CA3AF"
               value={email}
@@ -148,7 +148,7 @@ export default function SignUp() {
 
             <View className="relative w-full mb-4">
               <TextInput
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-16"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-16 text-black bg-white"
                 placeholder="Password"
                 placeholderTextColor="#9CA3AF"
                 value={password}
@@ -190,7 +190,7 @@ export default function SignUp() {
               Enter the verification code sent to {signUp.emailAddress}
             </Text>
             <TextInput
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4 text-black bg-white"
               placeholder="Verification code"
               placeholderTextColor="#9CA3AF"
               value={code}

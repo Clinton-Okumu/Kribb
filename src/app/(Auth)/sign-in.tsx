@@ -97,7 +97,7 @@ export default function SignInScreen() {
         </Text>
 
         <TextInput
-          className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4"
+          className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4 text-black bg-white"
           placeholder="Enter verification code"
           placeholderTextColor="#9CA3AF"
           keyboardType="number-pad"
@@ -149,7 +149,7 @@ export default function SignInScreen() {
         <Text className="text-gray-500 mb-8">Sign in to your account</Text>
 
         <TextInput
-          className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4"
+          className="w-full border border-gray-300 rounded-xl px-4 py-3 mb-4 text-black bg-white"
           placeholder="Email address"
           placeholderTextColor="#9CA3AF"
           value={email}
@@ -160,7 +160,7 @@ export default function SignInScreen() {
 
         <View className="relative w-full mb-6">
           <TextInput
-            className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-16"
+            className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-16 text-black bg-white"
             placeholder="Password"
             placeholderTextColor="#9CA3AF"
             value={password}
