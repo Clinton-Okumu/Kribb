@@ -23,5 +23,19 @@ export function useUserSync() {
       setIdAdmin(data.is_admin ?? false);
       return;
     }
+
+    const { data: newUser } = await authSupabase
+      .from("users")
+      .insert({
+        clerk_id: user!.id,
+        email: user!.emailAddresses[0].emailAddress,
+        first_name: user!.firstName,
+        last_name: user!.lastName,
+        avatar_url: user!.imageUrl,
+      })
+      .select("is_admin")
+      .single();
+
+    setIdAdmin(newUser.is_admin ?? false);
   };
 }
