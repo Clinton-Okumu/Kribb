@@ -36,6 +36,6 @@ export function useUserSync() {
       .select("is_admin")
       .single();
 
-    setIdAdmin(newUser.is_admin ?? false);
+    setIdAdmin(newUser?.is_admin ?? false);
   };
 }

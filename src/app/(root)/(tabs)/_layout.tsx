@@ -1,33 +1,62 @@
-import { NativeTabs } from "expo-router/unstable-native-tabs";
-import { Icon, Label } from "expo-router";
+import { Tabs } from "expo-router/js-tabs";
+import { Ionicons } from "@expo/vector-icons";
+import { useUserStore } from "../../../../store/userStore";
 
 export default function TabsLayout() {
+  const isAdmin = useUserStore((state) => state.isAdmin);
   return (
-    <NativeTabs>
-      <NativeTabs.Trigger name="index">
-        <Icon sf="house.fill" md="home" />
-        <Label>Home</Label>
-      </NativeTabs.Trigger>
+    <Tabs screenOptions={{ headerShown: false }}>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" color={color} size={size} />
+          ),
+        }}
+      />
 
-      <NativeTabs.Trigger name="search">
-        <Icon sf="magnifyingglass" md="search" />
-        <Label>Search</Label>
-      </NativeTabs.Trigger>
+      <Tabs.Screen
+        name="search"
+        options={{
+          title: "Search",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="search" color={color} size={size} />
+          ),
+        }}
+      />
 
-      <NativeTabs.Trigger name="create">
-        <Icon sf="plus.circle.fill" md="add_circle" />
-        <Label>Add Property</Label>
-      </NativeTabs.Trigger>
+      {isAdmin && (
+        <Tabs.Screen
+          name="create"
+          options={{
+            title: "Add Property",
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="add-circle" color={color} size={size} />
+            ),
+          }}
+        />
+      )}
 
-      <NativeTabs.Trigger name="saved">
-        <Icon sf="heart.fill" md="favorite" />
-        <Label>Saved</Label>
-      </NativeTabs.Trigger>
+      <Tabs.Screen
+        name="saved"
+        options={{
+          title: "Saved",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="heart" color={color} size={size} />
+          ),
+        }}
+      />
 
-      <NativeTabs.Trigger name="profile">
-        <Icon sf="person.fill" md="person" />
-        <Label>Profile</Label>
-      </NativeTabs.Trigger>
-    </NativeTabs>
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tabs>
   );
 }

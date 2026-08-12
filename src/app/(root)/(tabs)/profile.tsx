@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import { useAuth } from "@clerk/expo";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";

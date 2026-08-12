@@ -3,11 +3,20 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
       "@/assets/*": [
         "./assets/*"
+      ],
+      "@/lib/*": [
+        "./lib/*"
+      ],
+      "@/types": [
+        "./types/index.ts"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ],
+      "@/*": [
+        "./src/*"
       ]
     }
   },
