@@ -9,6 +9,12 @@
       "@/lib/*": [
         "./lib/*"
       ],
+      "@/store/*": [
+        "./store/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
       "@/types": [
         "./types/index.ts"
       ],
